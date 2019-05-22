@@ -184,38 +184,29 @@ const startBasicExample = () => {
 	     var bitmap;
 	     var canvas= document.createElement('canvas');
 	     var context = canvas.getContext('2d');
-//	      var imageObj = new Image();
-//		var canvas2 = document.createElement('img');
-//	     var ctx = document.getContext('2d');
-		canvas.id = "testCanvas";
-//		canvas2.id="prue";
+         	canvas.id = "testCanvas";
+
 	       document.body.appendChild(canvas);
-//		document.body.appendChild(canvas2);
+
 
        setInterval(function() {
 
 	     bitmap = localStream.getVideoFrame();
-	  var imageObj = new Image();
+	//  var imageObj = new Image();
 
-		context.drawImage(imageObj,0,0);
+	//	context.drawImage(imageObj,0,0);
 
-		imageObj.src = './assets/captura.jpg';
+	//	imageObj.src = './assets/captura.jpg';
 		canvas.width = bitmap.width;
 	        canvas.height = bitmap.height;
 
-	        context.drawImage(imageObj,0,0);
-//		 context.putImageData(bitmap,0,0);
-	//	context.putImageData("../envios");
-	    // var imagi = context.getImageData(0,0,canvas.width,canvas.height);
+	  //      context.drawImage(imageObj,0,0);
+		 context.putImageData(bitmap,0,0);
+
 		console.log('jej');
 		var pru1 = localStream.getVideoFrameURL();
-	//	var item = pru1.replace(/^data:image\/(png|jpg);base64,/,"");
-		//console.log('hay va',pru1);
+	
 		var res = pru1.split('base64,');
-//		document.location.href=res;
-//		console.log('los 2',res);
-//		console.log('solo 1',res[1]);
-//		const fs = require('fs')
 
 
 	//     console.log(bitmap);
